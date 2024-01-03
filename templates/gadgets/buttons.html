@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "main_template.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Customer CSS - commons.css -->
-    <link rel="stylesheet" href="../css/commons.css">
-
-</head>
-
-<body>
-    <nav class="container">nav</nav>
-    <main class="container">
+    {% block main_container %}
         <!-- basic  style -->
         <button class="btn">Basic</button>
         <button class="btn btn-primary">Primary</button>
@@ -27,12 +13,8 @@
         <button class="btn btn-light">Light</button>
         <button class="btn btn-link">Link</button>
 
-    </main>
-    <footer class="container">footer</footer>
+    {% endblock %}
+    
+    {% block footer %}
+    {% endblock %}
 
-</body>
-<!-- javascript는 body 다음에 넣어야 함. -->
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</html>
