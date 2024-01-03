@@ -9,9 +9,13 @@ from fastapi import Request
 # html 틀이 있는 폴더 위치
 templates = Jinja2Templates(directory="templates/")
 
-# 회원가입 / users/insert
+# 회원가입 form /users/form -> users/inserts.html
+@router.get("/form") # 어노테이션(웹에서 업무(function) 호출)
+async def insert(request:Request):
+    return templates.TemplateResponse(name="users/inserts.html",context={"request":request})
+
+# 회원가입 /users/insert -> users/logins.html
 @router.get("/inserts") # 어노테이션(웹에서 업무(function) 호출)
 async def insert(request:Request):
-    # pass
-    # return 0
-    return templates.TemplateResponse(name="users/inserts.html",context={"request":request})
+    pass # business
+    return templates.TemplateResponse(name="users/logins.html",context={"request":request})
