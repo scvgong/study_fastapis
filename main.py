@@ -13,10 +13,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from routes.gadgets import gadgets_router as event_router
+from routes.gadgets import gadgets_router as first_router
 from routes.positionings import positionings_router as second_router
-app.include_router(event_router,prefix='/gadgets')
+from routes.homes import home_router as third_router
+app.include_router(first_router,prefix='/gadgets')
 app.include_router(second_router,prefix='/positionings')
+app.include_router(third_router,prefix='/homes')
 
 from fastapi import Request
 from fastapi.templating import Jinja2Templates

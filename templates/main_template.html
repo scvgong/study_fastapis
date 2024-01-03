@@ -10,26 +10,49 @@
     <nav>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/">standards</a>
+                </li>
+              </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gadgets</a>
               <ul class="dropdown-menu">
                 <li>
-                    <a class="dropdown-item" href="">buttons</a>
+                    <a class="dropdown-item" href="gadgets/buttons">buttons</a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="">Cards</a>
+                    <a class="dropdown-item" href="gadgets/cards">Cards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gadgets/colors">Colors</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="gadgets/containers">Containers</a>
                 </li>
               </ul>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="#">Positionings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Positionings</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="positionings/forms">Forms</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="positionings/grids">Grids</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="positionings/standards">Standards</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="positionings/tables">Tables</a>
+                </li>
+              </ul>
+          </li>
     </nav>
     <main class="container">
         {% block main_container %}

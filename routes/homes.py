@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from fastapi.templating import Jinja2Templates
 
-router = APIRouter()
+home_router = APIRouter()
 
 from starlette.responses import HTMLResponse
 from fastapi import Request
@@ -16,13 +16,13 @@ templates = Jinja2Templates(directory="templates/")
 #     html = "<body> <h2>It's Home</h2> </body>"
 #     return html
 
-@router.get("/")
+@home_router.get("/")
 async def home(request:Request):
     pass
     return templates.TemplateResponse(name="homes/standards.html",context={"request":request})
 
 # /home/list
-@router.get("/list",response_class=HTMLResponse) # 어노테이션(웹에서 업무(function) 호출)
+@home_router.get("/list",response_class=HTMLResponse) # 어노테이션(웹에서 업무(function) 호출)
 async def home_list():
     # pass
     # return 0
