@@ -18,10 +18,10 @@ from routes.positionings import positionings_router as second_router
 from routes.homes import home_router as third_router
 from routes.users import router as users_router
 
-app.include_router(first_router,prefix='/gadgets')
-app.include_router(second_router,prefix='/positionings')
-app.include_router(third_router,prefix='/homes')
-app.include_router(users_router,prefix='/users')
+app.include_router(first_router,prefix='/gadgets') # 주소창의 경로 설정
+app.include_router(second_router,prefix='/positionings') # 주소창의 경로 설정
+app.include_router(third_router,prefix='/homes') # 주소창의 경로 설정
+app.include_router(users_router,prefix='/users') # 주소창의 경로 설정
 
 from fastapi import Request
 from fastapi.templating import Jinja2Templates

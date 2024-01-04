@@ -19,3 +19,16 @@ async def insert(request:Request):
 async def insert(request:Request):
     pass # business
     return templates.TemplateResponse(name="users/logins.html",context={"request":request})
+
+# 회원리스트 /users/lists -> users/lists.html
+@router.get("/lists") # 어노테이션(웹에서 업무(function) 호출)
+async def list(request:Request):
+    pass # business
+    return templates.TemplateResponse(name="users/lists.html",context={"request":request})
+
+# 회원상세정보 /users/reads -> users/reads.html
+# Path parameters : /users/reads/id or /users/reads/uniqe_name
+@router.get("/reads/{object_id}") 
+async def list(request:Request,object_id):
+    pass # business
+    return templates.TemplateResponse(name="users/reads.html",context={"request":request})

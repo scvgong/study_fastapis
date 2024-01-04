@@ -16,7 +16,8 @@
 
     <nav>nav</nav>
     <main class="container">
-        <h2>회원 리스트</h2>        
+        <h2>회원 리스트</h2>
+        <!-- 검색 항목 추가 필요 -->
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -26,26 +27,34 @@
                     <th>Read</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td><button>read</button></td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                    <td><button>read</button></td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                    <td><button>read</button></td>
-                </tr>
-            </tbody>
+            <form action="">
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>
+                            <button formaction="/users/reads/John">read</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                        <td>
+                            <button formaction="/users/reads/Mary">read</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                        <td>
+                            <button formaction="/users/reads/July">read</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </form>
         </table>
         <div>
             <ul class="pagination justify-content-center">
