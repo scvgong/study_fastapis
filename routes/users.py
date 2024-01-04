@@ -55,11 +55,4 @@ async def read(request:Request,object_id):
     pass # business
     return templates.TemplateResponse(name="users/reads.html",context={"request":request})
 
-@router.get("/reads/{object_id}") 
-async def update(request:Request,object_id):
-    dict_details = dict(await request.form())
-    print(dict_details)
-    pass # business
-    return templates.TemplateResponse(name="users/reads.html",context={"request":request})
-
 #회원가입(post) -> 로그인(post) -> 회원리스트(get) -> 회원 상세 : 리스트(get), 삭제(post)
