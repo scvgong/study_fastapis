@@ -30,6 +30,13 @@ async def list(request:Request):
     pass # business
     return templates.TemplateResponse(name="users/lists.html",context={"request":request})
 
+@router.post("/delete") 
+async def list(request:Request):
+    dict_details = dict(await request.form())
+    print(dict_details)
+    pass # business
+    return templates.TemplateResponse(name="users/lists.html",context={"request":request})
+
 # 회원리스트(get 방식) /users/lists -> users/lists.html
 @router.get("/lists")
 async def list(request:Request):
@@ -42,6 +49,13 @@ async def list(request:Request):
 # Path parameters : /users/reads/id or /users/reads/uniqe_name
 @router.get("/reads/{object_id}") 
 async def read(request:Request,object_id):
+    dict_details = dict(await request.form())
+    print(dict_details)
+    pass # business
+    return templates.TemplateResponse(name="users/reads.html",context={"request":request})
+
+@router.get("/reads/{object_id}") 
+async def update(request:Request,object_id):
     dict_details = dict(await request.form())
     print(dict_details)
     pass # business
