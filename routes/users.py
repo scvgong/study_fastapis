@@ -30,6 +30,7 @@ async def list(request:Request):
     pass # business
     return templates.TemplateResponse(name="users/lists.html",context={"request":request})
 
+# delete 메서드로 나오게 하기
 @router.post("/delete") 
 async def list(request:Request):
     dict_details = dict(await request.form())
