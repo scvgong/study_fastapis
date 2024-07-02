@@ -45,3 +45,34 @@ async def root():
 
 회원가입(post) -> 로그인(post) -> 회원리스트(get) -> 회원 상세 : 리스트(get), 삭제(post)
 function 내에 print : query or path parameters
+
+# Jinja
+* fast, expressive, extensible templating engine
+* offical : https://jinja.palletsprojects.com/en/3.1.x/
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in navigation %}
+        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h1>My Webpage</h1>
+    {{ a_variable }}
+
+    {# a comment #}
+</body>
+</html>
+```
+
+### default Jinja delimiters
+* {% ... %} for [Statements](https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-control-structures)
+    * [Template Inheritance](https://jinja.palletsprojects.com/en/3.0.x/templates/#template-inheritance)
+* {{ ... }} for [Expressions](https://jinja.palletsprojects.com/en/3.0.x/templates/#expressions) to print to the template output
+* {# ... #} for [Comments](https://jinja.palletsprojects.com/en/3.0.x/templates/#comments) not included in the template output
